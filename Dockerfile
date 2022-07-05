@@ -5,7 +5,7 @@ ARG user=jenkins
 ARG group=jenkins
 ARG uid=1000
 ARG gid=1000
-ARG USER_HOME "/home/${user}"
+ARG USER_HOME="/home/${user}"
 
 RUN groupadd -g ${gid} ${group}
 RUN useradd -d "${USER_HOME}" -u "${uid}" -g "${gid}" -m -s /bin/bash "${user}"
