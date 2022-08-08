@@ -25,7 +25,7 @@ rm -f /usr/lib/systemd/system/basic.target.wants/*; \
 rm -f /usr/lib/systemd/system/anaconda.target.wants/*;
 
 # Install packages requirements
-RUN zypper -n install git sudo curl openssl openssh unzip && zypper clean
+RUN zypper -n install git sudo curl openssl openssh unzip rsync && zypper clean
 
 # Install PHP
 RUN zypper -n install php7 php7-APCu php7-bcmath php7-bz2 php7-calendar php7-ctype php7-curl php7-dba php7-devel php7-dom php7-embed php7-enchant php7-exif php7-fastcgi php7-fileinfo php7-firebird php7-fpm php7-ftp php7-gd php7-gettext php7-gmp php7-ice php7-iconv php7-imagick php7-intl php7-json php7-ldap php7-libphutil php7-lzf php7-maxminddb php7-mbstring php7-memcached php7-mysql php7-odbc php7-opcache php7-openssl php7-pcntl php7-pdo php7-pear php7-pecl php7-pgsql php7-phar php7-phpunit8 php7-posix php7-readline php7-redis php7-shmop php7-smbclient php7-snmp php7-soap php7-sockets php7-sodium php7-sqlite php7-sysvmsg php7-sysvsem php7-sysvshm php7-test php7-tidy php7-tokenizer php7-uuid php7-xdebug php7-xmlreader php7-xmlrpc php7-xmlwriter php7-xsl php7-zip php7-zlib uwsgi-php7 apache2-mod_php7 php-composer && zypper clean
